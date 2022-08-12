@@ -1,0 +1,23 @@
+﻿<Window x:Class="Test01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test01"
+        mc:Ignorable="d"
+        Title="AlbertC Game WPF" Height="450" Width="800">
+    <Canvas Name="FirstWindow" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp">
+        <Canvas.Background>
+            <ImageBrush ImageSource="./img/backgroundInicio.jpg"/>
+        </Canvas.Background>
+        <Label Name="userTxt" FontSize="22" FontWeight="Regular" Content="User :" Canvas.Left="153" Canvas.Top="84"/>
+        <TextBox Name="userTxtBox" Text="User" Canvas.Left="243" Canvas.Top="99" />
+        <Button Name="optionsBtn">
+            <Image Source="./img/ajustesIcon.png" Height="34" Width="34" Stretch="Uniform"/>
+        </Button>
+        <Button Name="onfoBtn"/>
+        <Button Name="upImgBtn"/>
+        <Button Name="startBtn" Content="Start" RenderTransformOrigin="9.893,9" Canvas.Left="243" Canvas.Top="139"/>
+        <Button Name="scoreBtn" Content="Score" RenderTransformOrigin="4,7.4" Canvas.Left="153" Canvas.Top="139"/>
+    </Canvas>
+</Window>
