@@ -3,10 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Test01"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="1200">
-    <Canvas>
+        Title="gameWindow" Height="450" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Canvas Name="gameCanvas" Focusable="True">
+        <StackPanel Orientation="Horizontal" Margin="560 80" Background="DimGray" Opacity="0.5">
+            <StackPanel.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.OpacityMask>
+            <StackPanel Orientation="Horizontal" Margin="10 10">
+                <Label x:Name="scoreName" Canvas.Left="1074" Content="SCORE: " Foreground="White" Canvas.Top="10" Height="26" Width="84"/>
+                <Label x:Name="scorePoints" Foreground="White" Canvas.Left="1074" Canvas.Top="10" Height="26" Width="84" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBox Name="inputTB" KeyDown="inputTB_key" Margin="500 200" Height="26" Width="285" HorizontalAlignment="Center" Opacity="0.8" FontStyle="Italic" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Panel.ZIndex="-7" UseLayoutRounding="False" BorderBrush="#FFDFE7FD" BorderThickness="1" MaxLength="2" MinLines="1" MaxLines="1" AutoWordSelection="True"/>
+        <Rectangle Name="Car" Height="120" Width="200" Canvas.Right="10" Canvas.Top="335">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="./img/delorean.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Name="rctImg" Height="80" Width="150" Canvas.Left="45" Canvas.Top="339"/>
+        <Image gif:ImageBehavior.AnimatedSource="{Binding ElementName=portalGif, Path=IsVisible}" Name="portalGif" Height="150" Width="80" Canvas.Left="15" Canvas.Top="275"/>
+        <Image gif:ImageBehavior.AnimatedSource="{Binding ElementName=explosionGif, Path=Clip}" Visibility="Hidden" Name="explosionGif" Height="80" Width="150" Canvas.Left="15" Canvas.Top="275"/>
         <Canvas.Background>
             <ImageBrush ImageSource="./img/backgroundGame02.png"/>
         </Canvas.Background>
