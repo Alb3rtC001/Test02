@@ -15,5 +15,6 @@ Juego creado con una ambientación a las famosas peliculas de regreso al futuro,
  La idea de hacer este juego en C# y con WPF es porque la idea era implementar el mismo código en Xamarin donde da la posibilidad de usar el mismo código;
  pero para una aplicacion de móvil que sirve tanto en Android como IOS.
  
- En esta aplicación mis objetivos era implementar sonido, animaciones, una pequeña base de datos en XML (que sirve para movil) y un código útil con implementación de clases,
- documentado, reutilizable y limpio.
+ En esta aplicación mis objetivos era implementar sonido, animaciones, una pequeña base de datos en XML (ya que también sirve para movil) y un código útil con implementación de clases, documentado, reutilizable y limpio. 
+ 
+ Hay cosas por mejorar pero creo que el objetivo esta conseguido.
