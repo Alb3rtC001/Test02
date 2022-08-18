@@ -1,15 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUsuario>
-  <Usuario>
-    <nick>AlbertC</nick>
-    <score>2480</score>
-  </Usuario>
-  <Usuario>
-    <nick>AlbertC</nick>
-    <score>1240</score>
-  </Usuario>
-  <Usuario>
-    <nick>AlbertC</nick>
-    <score>744</score>
-  </Usuario>
+
 </ArrayOfUsuario>
